@@ -1,4 +1,10 @@
-import './admin-user';
-import './profile-edit-profile';
-import './profile-edit-password';
-import './post';
+import "./admin-user";
+import "./profile-edit-profile";
+import "./profile-edit-password";
+import "./post";
+import "./applicant";
+import "./hrworker";
+import "./degree";
+import "./specialization";
+import "./revision";
+import "./application";
