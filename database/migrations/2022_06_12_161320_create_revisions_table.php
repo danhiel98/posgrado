@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('hrworker_id');
             $table->unsignedBigInteger('application_id');
             $table->foreign('hrworker_id')->references('id')->on('hrworkers');
-            $table->foreign('application_id')->references('id')->on('application');
+            $table->foreign('application_id')->references('id')->on('applications');
             $table->timestamps();
         });
     }

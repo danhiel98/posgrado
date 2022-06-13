@@ -13,8 +13,8 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i> {{ trans('admin.applicant.actions.index') }}
-                        <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/applicants/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.applicant.actions.create') }}</a>
+                        <i class="fa fa-align-justify"></i> Aspirantes
+                        <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/applicants/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; Nuevo aspirante</a>
                     </div>
                     <div class="card-body" v-cloak>
                         <div class="card-block">
@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="col-sm-auto form-group ">
                                         <select class="form-control" v-model="pagination.state.per_page">
-                                            
+
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="100">100</option>
@@ -49,14 +49,14 @@
                                             </label>
                                         </th>
 
-                                        <th is='sortable' :column="'id'">{{ trans('admin.applicant.columns.id') }}</th>
-                                        <th is='sortable' :column="'first_name'">{{ trans('admin.applicant.columns.first_name') }}</th>
-                                        <th is='sortable' :column="'last_name'">{{ trans('admin.applicant.columns.last_name') }}</th>
-                                        <th is='sortable' :column="'dui'">{{ trans('admin.applicant.columns.dui') }}</th>
-                                        <th is='sortable' :column="'student_id'">{{ trans('admin.applicant.columns.student_id') }}</th>
-                                        <th is='sortable' :column="'birth_date'">{{ trans('admin.applicant.columns.birth_date') }}</th>
-                                        <th is='sortable' :column="'phone_number'">{{ trans('admin.applicant.columns.phone_number') }}</th>
-                                        <th is='sortable' :column="'email'">{{ trans('admin.applicant.columns.email') }}</th>
+                                        <th is='sortable' :column="'id'">ID</th>
+                                        <th is='sortable' :column="'first_name'">Nombres</th>
+                                        <th is='sortable' :column="'last_name'">Apellidos</th>
+                                        <th is='sortable' :column="'dui'">DUI</th>
+                                        <th is='sortable' :column="'student_id'">Carnet</th>
+                                        <th is='sortable' :column="'birth_date'">F. Nacimiento</th>
+                                        <th is='sortable' :column="'phone_number'">Telefono</th>
+                                        <th is='sortable' :column="'email'">Correo-e</th>
 
                                         <th></th>
                                     </tr>
@@ -88,7 +88,7 @@
                                         <td>@{{ item.birth_date | date }}</td>
                                         <td>@{{ item.phone_number }}</td>
                                         <td>@{{ item.email }}</td>
-                                        
+
                                         <td>
                                             <div class="row no-gutters">
                                                 <div class="col-auto">

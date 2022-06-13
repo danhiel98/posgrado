@@ -41,7 +41,7 @@ class FillDefaultAdminUserAndPermissions extends Migration
     /**
      * @var string
      */
-    protected $password = 'nggSWlpxy4';
+    protected $password = 'admin';
 
     /**
      * FillDefaultAdminUserAndPermissions constructor.
@@ -99,6 +99,15 @@ class FillDefaultAdminUserAndPermissions extends Migration
                     return $permission === 'admin.admin-user.impersonal-login';
                 }),
             ],
+            [
+                'name' => 'Aspirante',
+                'guard_name' => 'aspirante',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+                'permissions' => $defaultPermissions->reject(function ($permission) {
+                    return $permission === 'admin.admin-user.impersonal-login';
+                }),
+            ],
         ];
 
         //Add new users
@@ -106,7 +115,7 @@ class FillDefaultAdminUserAndPermissions extends Migration
             [
                 'first_name' => 'Administrator',
                 'last_name' => 'Administrator',
-                'email' => 'administrator@brackets.sk',
+                'email' => 'administrator@mail.com',
                 'password' => Hash::make($this->password),
                 'remember_token' => null,
                 'created_at' => Carbon::now(),
@@ -116,6 +125,25 @@ class FillDefaultAdminUserAndPermissions extends Migration
                     [
                         'name' => 'Administrator',
                         'guard_name' => $this->guardName,
+                    ],
+                ],
+                'permissions' => [
+                    //
+                ],
+            ],
+            [
+                'first_name' => 'Carlos',
+                'last_name' => 'Rivera',
+                'email' => 'crivera@mail.com',
+                'password' => Hash::make($this->password),
+                'remember_token' => null,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+                'activated' => true,
+                'roles' => [
+                    [
+                        'name' => 'Aspirante',
+                        'guard_name' => 'aspirante',
                     ],
                 ],
                 'permissions' => [
